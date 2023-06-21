@@ -14,6 +14,7 @@ import java.util.List;
 @RequestMapping("/admin")
 @CrossOrigin(origins = "*", allowedHeaders = "Content-Type")//解决跨域问题
 public class UserController {
+    //sdf
     @Autowired
     private UserService userService;
 

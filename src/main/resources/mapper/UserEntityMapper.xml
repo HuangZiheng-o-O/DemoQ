@@ -95,20 +95,20 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-    <!--根据用户名查找用户信息-->
+  <!--根据用户名查找用户信息-->
   <select id="selectUserInfo" parameterType="java.lang.String" resultType="com.example.dao.entity.UserEntity">
     SELECT id,username,`password`,status
     FROM user_info
     WHERE username = #{username,jdbcType=VARCHAR} and `password` = #{password,jdbcType=VARCHAR}
-    AND status = "1"
+      AND status = "1"
   </select>
 
   <select id="searchUserByName" parameterType="java.lang.String" resultType="com.example.dao.entity.UserEntity">
---     传进来的参数实际上是一个字符串：username
+    --     传进来的参数实际上是一个字符串：username
     SELECT *
     FROM user_info
     WHERE username = #{username,jdbcType=VARCHAR}
-    AND status = "1"
+      AND status = "1"
   </select>
 
 </mapper>
